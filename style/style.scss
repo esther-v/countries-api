@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+$dark-grey: hsl(207, 26%, 17%);
+
 body{
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -14,9 +16,45 @@ nav, .container{
     padding: 20px 50px;
 }
 
-nav, .searching{
+nav, .searching, .mode{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+nav{
+    box-shadow: rgba(33, 35, 38, 0.2) 0px 10px 10px -10px; 
+    z-index: 3;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .mode{
+        cursor: pointer;
+    }
+}
+.searching{
+    margin-top: 20px;
+    position: relative;
+    input{
+        padding: 20px 40px;
+        width: 350px;
+        border: none;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 5px; 
+        outline: none;
+    }
+    .fa-search{
+        position: absolute;
+        left: 12px;
+        color: rgb(126, 126, 126);
+        font-size: 14px;
+    }
+    select{
+        padding: 20px;
+        border: none;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 5px; 
+    }
 }
 
 .countries{
@@ -40,4 +78,19 @@ nav, .searching{
             }
         }
     }
+}
+
+.dark-mode{
+    background-color: $dark-grey;
+}
+
+.red{
+    color: red;
+}
+
+.box{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 250px;
+    border-radius: 5px;
+    overflow: hidden;
 }

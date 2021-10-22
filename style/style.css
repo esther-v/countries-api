@@ -13,9 +13,47 @@ nav, .container {
   padding: 20px 50px;
 }
 
-nav, .searching {
+nav, .searching, .mode {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  box-shadow: rgba(33, 35, 38, 0.2) 0px 10px 10px -10px;
+  z-index: 3;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+nav .mode {
+  cursor: pointer;
+}
+
+.searching {
+  margin-top: 20px;
+  position: relative;
+}
+.searching input {
+  padding: 20px 40px;
+  width: 350px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  outline: none;
+}
+.searching .fa-search {
+  position: absolute;
+  left: 12px;
+  color: #7e7e7e;
+  font-size: 14px;
+}
+.searching select {
+  padding: 20px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
 }
 
 .countries {
@@ -39,6 +77,21 @@ nav, .searching {
 }
 .countries .box .country-infos h2 {
   margin-bottom: 10px;
+}
+
+.dark-mode {
+  background-color: #202c37;
+}
+
+.red {
+  color: red;
+}
+
+.box {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 250px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
