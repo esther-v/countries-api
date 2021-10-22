@@ -63,35 +63,31 @@ nav .mode {
   justify-content: space-between;
   gap: 30px;
 }
-.countries .box {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 250px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.countries .box .flag img {
-  width: 250px;
-}
-.countries .box .country-infos {
-  padding: 25px 20px 40px;
-}
-.countries .box .country-infos h2 {
-  margin-bottom: 10px;
-}
-
-.dark-mode {
-  background-color: #202c37;
-}
-
-.red {
-  color: red;
-}
 
 .box {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 250px;
   border-radius: 5px;
   overflow: hidden;
+}
+.box .flag {
+  width: 250px;
+  height: 150px;
+}
+.box .flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box .country-infos {
+  padding: 25px 20px 40px;
+}
+.box .country-infos h2 {
+  margin-bottom: 10px;
+}
+
+.dark-mode {
+  background-color: #202c37;
 }
 
 /*# sourceMappingURL=style.css.map */

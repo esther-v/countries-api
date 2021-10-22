@@ -63,29 +63,6 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
-    .box{
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        width: 250px;
-        border-radius: 5px;
-        overflow: hidden;
-        .flag img{
-            width: 250px;  
-        }
-        .country-infos{
-            padding: 25px 20px 40px;
-            h2{
-                margin-bottom: 10px;
-            }
-        }
-    }
-}
-
-.dark-mode{
-    background-color: $dark-grey;
-}
-
-.red{
-    color: red;
 }
 
 .box{
@@ -93,4 +70,24 @@ nav{
     width: 250px;
     border-radius: 5px;
     overflow: hidden;
+    .flag {
+        width: 250px;  
+        height: 150px;
+    
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .country-infos{
+        padding: 25px 20px 40px;
+        h2{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.dark-mode{
+    background-color: $dark-grey;
 }
