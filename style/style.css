@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+nav, .container {
+  padding: 20px 50px;
+}
+
+nav, .searching {
+  display: flex;
+  justify-content: space-between;
+}
+
+.countries {
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+.countries .box {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.countries .box .flag img {
+  width: 250px;
+}
+.countries .box .country-infos {
+  padding: 25px 20px 40px;
+}
+.countries .box .country-infos h2 {
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
