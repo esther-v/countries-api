@@ -93,6 +93,23 @@ nav{
     background-color: $dark-grey;
 }
 
+//page country
+main{
+    padding: 20px 50px;
+    div{
+        display: flex;
+        height: 200px;
+        border: 1px solid red;
+        img{
+            width: 50%;
+            object-fit: cover;
+            margin-right: 50px;
+        }
+    }
+}
+
+
+
 
 
     

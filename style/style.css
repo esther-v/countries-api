@@ -90,4 +90,18 @@ nav .mode {
   background-color: #202c37;
 }
 
+main {
+  padding: 20px 50px;
+}
+main div {
+  display: flex;
+  height: 200px;
+  border: 1px solid red;
+}
+main div img {
+  width: 50%;
+  object-fit: cover;
+  margin-right: 50px;
+}
+
 /*# sourceMappingURL=style.css.map */
