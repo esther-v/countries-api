@@ -1,6 +1,8 @@
 const darkModeBtn = document.querySelector('.mode')
 const container = document.querySelector('.container')
 const countries = document.querySelector('.countries')
+const listCountries = []
+const selectBtn = document.querySelector('#region-select')
 
 //dark mode
 
@@ -22,6 +24,7 @@ const getCountries = async () => {
     results.forEach(result => {
         let box = document.createElement('div')
         countries.appendChild(box)
+        listCountries.push(box)
         let pop = new Intl.NumberFormat('en-US').format(`${result.population}`) 
         
         box.innerHTML = `
@@ -38,20 +41,21 @@ const getCountries = async () => {
               
         `
         box.classList.add('box')
+        
     })
 }
 
 getCountries()
 
-// api call for getting all regions
+//filter by region
 
-// const apiURLRegions = 'https://restcountries.com/v2/continent/europe'
+selectBtn.addEventListener('change', () => {
+    listCountries.forEach(country => {
+        if(!country.innerText.includes(selectBtn.value)){
+            country.style.display = 'none'   
+        } else {
+            country.style.display = 'block'
+        }
+    })
+})
 
-// const getRegions = async () => {
-//     const res = await fetch (apiURLRegions)
-//     const results = await res.json()
-
-//     console.log(results)
-// }
-
-// getRegions()
