@@ -16,10 +16,55 @@ const getCountryDetails = async () => {
     let content = document.createElement('div')
     const main = document.querySelector('main')
     main.appendChild(content)
+    let borders = infos.borders;
+    
     content.innerHTML = `
         <img src=${infos.flags.png}>
-        <p>${infos.name}</p>
-    `
+        <div class="country-details">
+            <h2>${infos.name}</h2>
+            <div class="infos">
+                <div className="name">
+                    <p>Native Name: <span> ${infos.nativeName}</span></p>
+                    <p>Population: <span>${infos.population}</span></p>
+                    <p>Region: <span>${infos.region}</span></p>
+                    <p>Sub Region: <span>${infos.subregion}</span></p>
+                    <p>Capital: <span>${infos.capital}</span></p>
+                </div>
+                <div className="domain">
+                    <p>Top Level Domain: <span> ${infos.topLevelDomain[0]} </span></p>
+                    <p>Currencies: <span>${infos.currencies[0].name}</span></p>
+                    <p>Languages: <span>${infos.languages[0].name}</span></p>
+                </div>
+                
+            </div>
+            <div class="country-borders">
+                <p>Border Countries: </p>
+                ${borders.map(border => {
+                    return`
+                        <span class="border">${border}</span>
+                    `
+                }).join("")}
+            </div>
+            
+        </div>
+        `
+        
+        
+        // if(borders !== undefined || borders !== null) {
+        //     let boxBorders = document.createElement('div')
+        //     borders.forEach(border => {
+        //         boxBorders.innerHTML += `
+        //             <span>${border}</p>
+        //         `
+
+        //     })
+        //     content.insertAdjacentElement('beforeEnd', boxBorders)
+        // }
+        // console.log(borders)
+       
+
+        
+    
 }
 
 getCountryDetails()
