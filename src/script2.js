@@ -4,19 +4,24 @@ console.log(nameCountry)
 
 //redirect homepage
 function goHome() {
-    window.location.href="index.html"
+    window.location.href="../index.html"
 }
 
 //get country infos
 const getCountryDetails = async () => {
     const response = await fetch(`https://restcountries.com/v2/name/${nameCountry}`)
+    if(!response.ok) {
+        throw new Error("could not fetch data, please refresh page")
+    }
     const details = await response.json()
     const infos = details[0]
     console.log(infos)
     let content = document.createElement('div')
     const main = document.querySelector('main')
     main.appendChild(content)
-    let borders = infos.borders;
+    let borders = infos.borders
+    console.log(borders)
+   
     
     content.innerHTML = `
         <img src=${infos.flags.png}>
@@ -32,39 +37,28 @@ const getCountryDetails = async () => {
                 </div>
                 <div className="domain">
                     <p>Top Level Domain: <span> ${infos.topLevelDomain[0]} </span></p>
+                   
                     <p>Currencies: <span>${infos.currencies[0].name}</span></p>
+                       
                     <p>Languages: <span>${infos.languages[0].name}</span></p>
                 </div>
                 
             </div>
             <div class="country-borders">
                 <p>Border Countries: </p>
-                ${borders.map(border => {
+              
+                
+                ${borders.map((border) => {
                     return`
                         <span class="border">${border}</span>
                     `
                 }).join("")}
+             
+         
             </div>
             
         </div>
-        `
-        
-        
-        // if(borders !== undefined || borders !== null) {
-        //     let boxBorders = document.createElement('div')
-        //     borders.forEach(border => {
-        //         boxBorders.innerHTML += `
-        //             <span>${border}</p>
-        //         `
-
-        //     })
-        //     content.insertAdjacentElement('beforeEnd', boxBorders)
-        // }
-        // console.log(borders)
-       
-
-        
-    
+        ` 
 }
 
 getCountryDetails()

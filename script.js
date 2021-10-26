@@ -32,7 +32,7 @@ const getCountries = async () => {
                 <img src="${result.flags.png}" alt="flag-${result.name}">
             </div>
 
-            <div class="country-infos" onclick="window.location.href ='country-details.html?${result.name}'">
+            <div class="country-infos" onclick="window.location.href ='./src/country-details.html?${result.name}'">
                 <h2>${result.name}</h2>
                 <p>Population: ${pop}</p>
                 <p>Region: ${result.region}</p>
@@ -59,3 +59,4 @@ selectBtn.addEventListener('change', () => {
     })
 })
 
+//search by name country

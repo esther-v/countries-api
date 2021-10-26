@@ -110,10 +110,8 @@ main button i {
 }
 main > div {
   display: flex;
-  border: 1px solid red;
 }
 main > div img {
-  border: 1px solid blue;
   width: 50%;
   object-fit: cover;
   padding-right: 50px;
