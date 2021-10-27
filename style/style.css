@@ -73,6 +73,7 @@ nav .mode {
 .box .flag {
   width: 250px;
   height: 150px;
+  cursor: pointer;
 }
 .box .flag img {
   width: 100%;
@@ -81,6 +82,7 @@ nav .mode {
 }
 .box .country-infos {
   padding: 25px 20px 40px;
+  cursor: pointer;
 }
 .box .country-infos h2 {
   margin-bottom: 10px;
@@ -110,11 +112,13 @@ main button i {
 }
 main > div {
   display: flex;
+  align-items: center;
 }
 main > div img {
-  width: 50%;
+  border: 1px solid blue;
+  width: 450px;
+  height: 350px;
   object-fit: cover;
-  padding-right: 50px;
 }
 main > div .country-details {
   padding: 40px 50px;
@@ -138,12 +142,58 @@ main > div .country-details .infos {
 main > div .country-details .country-borders {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 main > div .country-details .country-borders span {
   font-size: 14px;
   padding: 5px 8px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-left: 25px;
+}
+
+@media screen and (max-width: 980px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main > div {
+    border: 1px solid red;
+    flex-direction: column;
+    width: 450px;
+  }
+  main > div .country-details {
+    padding: 40px 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 630px) {
+  .searching {
+    flex-direction: column;
+  }
+  .searching input {
+    margin-bottom: 20px;
+  }
+  .searching .fa-search {
+    opacity: 0;
+  }
+
+  .countries {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  main > div {
+    width: 300px;
+  }
+  main > div img {
+    width: 300px;
+    height: 200px;
+  }
+  main > div .infos {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

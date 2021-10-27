@@ -29,7 +29,7 @@ const getCountries = async () => {
         
         box.innerHTML = `
             <div class="flag">
-                <img src="${result.flags.png}" alt="flag-${result.name}">
+                <img src="${result.flags.png}" alt="flag-${result.name}" onclick="window.location.href ='./src/country-details.html?${result.name}'">
             </div>
 
             <div class="country-infos" onclick="window.location.href ='./src/country-details.html?${result.name}'">
