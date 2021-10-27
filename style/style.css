@@ -90,6 +90,13 @@ nav .mode {
 
 .dark-mode {
   background-color: #202c37;
+  color: #f1f1f1;
+}
+.dark-mode .box {
+  border: 1px solid #6f6f6f;
+}
+.dark-mode main {
+  background-color: #202c37;
 }
 
 main {
@@ -99,7 +106,7 @@ main button {
   margin: 40px 0 60px;
   padding: 10px 20px;
   border: none;
-  background: none;
+  background: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   font-size: 16px;
@@ -115,7 +122,6 @@ main > div {
   align-items: center;
 }
 main > div img {
-  border: 1px solid blue;
   width: 450px;
   height: 350px;
   object-fit: cover;
@@ -159,7 +165,6 @@ main > div .country-details .country-borders span {
     flex-direction: column;
   }
   main > div {
-    border: 1px solid red;
     flex-direction: column;
     width: 450px;
   }

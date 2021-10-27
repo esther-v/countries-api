@@ -1,3 +1,6 @@
+const main = document.querySelector('main')
+const darkModeBtn = document.querySelector('.mode')
+
 //récupérer nom du pays cliqué, dans l'url
 let nameCountry = window.location.href.split("?")[1]
 console.log(nameCountry)
@@ -6,6 +9,12 @@ console.log(nameCountry)
 function goHome() {
     window.location.href="../index.html"
 }
+
+//dark mode
+
+darkModeBtn.addEventListener('click', () => {
+    main.classList.toggle('dark-mode')    
+})
 
 //get country infos
 const getCountryDetails = async () => {
@@ -17,7 +26,6 @@ const getCountryDetails = async () => {
     const infos = details[0]
     console.log(infos)
     let content = document.createElement('div')
-    const main = document.querySelector('main')
     main.appendChild(content)
     let borders = infos.borders
     console.log(borders)

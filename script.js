@@ -68,7 +68,7 @@ const filterCountries = (searchTerm) => {
         if(country.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
             country.style.display = 'block'
         } else {
-            country.style.display = "none"
+            country.style.display = 'none'
         }
     })
 }

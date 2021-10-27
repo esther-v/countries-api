@@ -7,6 +7,8 @@
 }
 
 $dark-grey: hsl(207, 26%, 17%);
+$dark-blue: hsl(209, 23%, 22%);
+$white: #f1f1f1;
 
 body{
     font-family: 'Nunito Sans', sans-serif;
@@ -93,6 +95,13 @@ nav{
 
 .dark-mode{
     background-color: $dark-grey;
+    color: $white;
+    .box{
+        border: 1px solid rgb(111, 111, 111);
+    }
+    main{
+        background-color: $dark-grey;
+    }
 }
 
 //page country
@@ -102,7 +111,7 @@ main{
         margin: 40px 0 60px;
         padding: 10px 20px;
         border: none;
-        background: none;
+        background: white;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         border-radius: 5px;
         font-size: 16px;
@@ -117,11 +126,9 @@ main{
         display: flex;
         align-items: center;
         img{
-            border: 1px solid blue;
             width: 450px;
             height:350px;
-            object-fit: cover;
-            
+            object-fit: cover; 
         }
         .country-details{
             padding: 40px 50px;
@@ -163,7 +170,6 @@ main{
         justify-content: center;
         flex-direction: column;
         >div{
-            border: 1px solid red;
             flex-direction: column;
             width: 450px;
             .country-details{
