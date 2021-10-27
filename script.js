@@ -3,6 +3,7 @@ const container = document.querySelector('.container')
 const countries = document.querySelector('.countries')
 const listCountries = []
 const selectBtn = document.querySelector('#region-select')
+const searchBtn = document.querySelector('#search-country')
 
 //dark mode
 
@@ -60,3 +61,14 @@ selectBtn.addEventListener('change', () => {
 })
 
 //search by name country
+searchBtn.addEventListener('input', (e) => filterCountries(e.target.value))
+
+const filterCountries = (searchTerm) => {
+    listCountries.forEach(country => {
+        if(country.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
+            country.style.display = 'block'
+        } else {
+            country.style.display = "none"
+        }
+    })
+}
