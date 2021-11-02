@@ -156,6 +156,12 @@ main > div .country-details .country-borders span {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-left: 25px;
 }
+main > div .country-details .country-borders h5 {
+  font-size: 16px;
+  margin-left: 20px;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
 
 @media screen and (max-width: 980px) {
   main {

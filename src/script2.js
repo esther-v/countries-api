@@ -29,7 +29,6 @@ const getCountryDetails = async () => {
     main.appendChild(content)
     let borders = infos.borders
     console.log(borders)
-   
     
     content.innerHTML = `
         <img src=${infos.flags.png}>
@@ -56,11 +55,12 @@ const getCountryDetails = async () => {
                 <p>Border Countries: </p>
               
                 
-                ${borders.map((border) => {
+                
+                ${borders ? borders.map((border) => {
                     return`
                         <span class="border">${border}</span>
                     `
-                }).join("")}
+                }).join("") : "<h5> None</h5>"}
              
          
             </div>
