@@ -104,9 +104,19 @@ nav{
     }
 }
 
+.dark-nav{
+    background: #2B3945;
+    color: #f1f1f1;
+    a{
+        color: #f1f1f1;
+    }
+}
+
+
 //page country
 main{
     padding: 20px 50px;
+    height: 100vh;
     button{
         margin: 40px 0 60px;
         padding: 10px 20px;

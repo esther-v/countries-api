@@ -1,5 +1,7 @@
 const main = document.querySelector('main')
 const darkModeBtn = document.querySelector('.mode')
+const nav = document.querySelector('nav')
+const navLink = document.querySelector('nav a')
 
 //récupérer nom du pays cliqué, dans l'url
 let nameCountry = window.location.href.split("?")[1]
@@ -13,7 +15,8 @@ function goHome() {
 //dark mode
 
 darkModeBtn.addEventListener('click', () => {
-    main.classList.toggle('dark-mode')    
+    main.classList.toggle('dark-mode') 
+    nav.classList.toggle('dark-nav')   
 })
 
 //get country infos

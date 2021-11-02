@@ -4,11 +4,14 @@ const countries = document.querySelector('.countries')
 const listCountries = []
 const selectBtn = document.querySelector('#region-select')
 const searchBtn = document.querySelector('#search-country')
+const nav = document.querySelector('nav')
+const navLink = document.querySelector('nav a')
 
 //dark mode
 
 darkModeBtn.addEventListener('click', () => {
-    container.classList.toggle('dark-mode')    
+    container.classList.toggle('dark-mode') 
+    nav.classList.toggle('dark-nav')
 })
 
 //api call for getting all countries
